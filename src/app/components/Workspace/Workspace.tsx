@@ -26,13 +26,12 @@ const Workspace = () => {
 
             .finally(() => {
                 setLoading(false);
-
-        });
+            });
     };
 
     const handleCopy = () => {
-        navigator.clipboard.writeText(shortUrl)
-    }
+        navigator.clipboard.writeText(shortUrl);
+    };
 
     return (
         <main className={styles.main}>
@@ -45,7 +44,7 @@ const Workspace = () => {
                 required
                 isLoading={isLoading}
             />
-            {shortUrl && (<div className={styles.arrow}>&#8595;</div>)}
+            {shortUrl && <div className={styles.arrow}>&#8595;</div>}
             {shortUrl && (
                 <InputButton
                     value={shortUrl}

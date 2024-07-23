@@ -1,16 +1,25 @@
-import { ThreeDots } from 'react-loader-spinner'
+import { ThreeDots } from 'react-loader-spinner';
 
 import styles from '@/app/components/InputButton/InptButton.module.css';
-import clsx from "clsx";
+import clsx from 'clsx';
 
-type InputButtonProps =  {
+type InputButtonProps = {
     buttonText?: string;
     error?: string | null;
     onSubmit: () => void;
     isLoading?: boolean;
 } & React.HTMLProps<HTMLInputElement>;
 
-const InputButton = ({ buttonText = 'Submit', error, value, onChange, onSubmit, required, type, isLoading  }: InputButtonProps) => {
+const InputButton = ({
+    buttonText = 'Submit',
+    error,
+    value,
+    onChange,
+    onSubmit,
+    required,
+    type,
+    isLoading
+}: InputButtonProps) => {
     return (
         <div className={styles.wrapper}>
             <div className={styles.inputButton}>
@@ -25,10 +34,12 @@ const InputButton = ({ buttonText = 'Submit', error, value, onChange, onSubmit, 
                 <button
                     type="button"
                     onClick={onSubmit}
-                    className={clsx(styles.button, isLoading && styles.isLoading)}
+                    className={clsx(
+                        styles.button,
+                        isLoading && styles.isLoading
+                    )}
                 >
-                    {isLoading ?
-
+                    {isLoading ? (
                         <ThreeDots
                             visible={true}
                             height="40"
@@ -37,12 +48,12 @@ const InputButton = ({ buttonText = 'Submit', error, value, onChange, onSubmit, 
                             radius="9"
                             ariaLabel="three-dots-loading"
                         />
-                        : buttonText}
-
+                    ) : (
+                        buttonText
+                    )}
                 </button>
             </div>
             {error && <span className={styles.error}>{error}</span>}
-
         </div>
     );
 };
