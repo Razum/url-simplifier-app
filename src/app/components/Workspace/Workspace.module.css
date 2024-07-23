@@ -1,0 +1,21 @@
+.main {
+    width: 100%;
+    backdrop-filter: blur(7px);
+    background-color: rgb(255 255 255 / 0.15);
+    border-radius: 1rem;
+    padding: 5rem 2rem;
+    position: relative;
+}
+
+@media screen and (min-width: 48em) {
+    .main {
+        width: 66%;
+    }
+}
+
+.arrow {
+    color: rgb(255 255 255 / 1);
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem 0;
+}

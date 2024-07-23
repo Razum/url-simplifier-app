@@ -1,0 +1,47 @@
+{
+    "version": "6",
+    "dialect": "sqlite",
+    "id": "f5f005df-bfbc-4887-ad45-eaa57ffe4833",
+    "prevId": "00000000-0000-0000-0000-000000000000",
+    "tables": {
+        "urls": {
+            "name": "urls",
+            "columns": {
+                "id": {
+                    "name": "id",
+                    "type": "integer",
+                    "primaryKey": true,
+                    "notNull": true,
+                    "autoincrement": true
+                },
+                "originalUrl": {
+                    "name": "originalUrl",
+                    "type": "text",
+                    "primaryKey": false,
+                    "notNull": true,
+                    "autoincrement": false
+                },
+                "shortUrl": {
+                    "name": "shortUrl",
+                    "type": "text",
+                    "primaryKey": false,
+                    "notNull": true,
+                    "autoincrement": false
+                }
+            },
+            "indexes": {},
+            "foreignKeys": {},
+            "compositePrimaryKeys": {},
+            "uniqueConstraints": {}
+        }
+    },
+    "enums": {},
+    "_meta": {
+        "schemas": {},
+        "tables": {},
+        "columns": {}
+    },
+    "internal": {
+        "indexes": {}
+    }
+}

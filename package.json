@@ -1,24 +1,47 @@
 {
-  "name": "url-simplifier-app",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.5"
-  },
-  "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.5"
-  }
+    "name": "url-simplifier-app",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "format": "prettier --write .",
+        "drizzle:studio": "drizzle-kit studio",
+        "drizzle:generate": "drizzle-kit generate",
+        "drizzle:migrate": "drizzle-kit migrate"
+    },
+    "dependencies": {
+        "better-sqlite3": "^11.1.2",
+        "clsx": "^2.1.1",
+        "drizzle-orm": "^0.32.0",
+        "nanoid": "^5.0.7",
+        "next": "14.2.5",
+        "react": "^18",
+        "react-dom": "^18",
+        "react-loader-spinner": "^6.1.6",
+        "sqlite3": "^5.1.7"
+    },
+    "devDependencies": {
+        "@types/better-sqlite3": "^7.6.11",
+        "@types/node": "^20",
+        "@types/react": "^18",
+        "@types/react-dom": "^18",
+        "@typescript-eslint/eslint-plugin": "^7.17.0",
+        "drizzle-kit": "^0.23.0",
+        "eslint": "^8.57.0",
+        "eslint-config-next": "14.2.5",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-prettier": "^5.2.1",
+        "eslint-plugin-react": "^7.35.0",
+        "prettier": "^3.3.3",
+        "typescript": "^5"
+    },
+    "prettier": {
+        "trailingComma": "none",
+        "tabWidth": 4,
+        "semi": true,
+        "singleQuote": true
+    }
 }

@@ -1,0 +1,63 @@
+.inputButton {
+    display: flex;
+}
+
+.input {
+    flex: 1;
+    border-radius: 1rem 0 0 1rem;
+    height: 3rem;
+    box-shadow: none;
+    border: none;
+    font-size: inherit;
+    padding: 0 1rem;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.input:invalid:not(:placeholder-shown) {
+    box-shadow: inset 0 0 0 2px rgb(255 0 0 / 0.75);
+}
+
+.input:invalid + .button {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.error {
+    visibility: hidden;
+    font-size: 0.85rem;
+    color: rgb(255 255 255 / 0.75);
+}
+
+.wrapper:has(:invalid) .error {
+    visibility: visible;
+}
+
+.button {
+    border-radius: 0 1rem 1rem 0;
+    height: 3rem;
+    padding: 0 2rem;
+    border: none;
+    font-size: inherit;
+    cursor: pointer;
+    color: rgb(255 255 255 / 1);
+    background-image: linear-gradient(135deg, #f34079 40%, #fc894d);
+    transition: box-shadow 0.1s ease;
+}
+
+.button:hover {
+    box-shadow: 0 3px 5px rgb(255 255 255 / 0.25);
+}
+
+.button:active {
+    filter: grayscale(30%);
+    box-shadow: none;
+}
+
+.isLoading {
+    pointer-events: none;
+    opacity: 0.9;
+}
