@@ -5,7 +5,7 @@ import InputButton from '@/app/components/InputButton';
 import styles from '@/app/components/Workspace/Workspace.module.css';
 
 const Workspace = () => {
-    const [url, setUrl] = useState('http://asdasdasdasd');
+    const [url, setUrl] = useState('');
     const [shortUrl, setShortUrl] = useState('');
     const [isLoading, setLoading] = useState(false);
     const [error, setError] = useState('');
@@ -42,6 +42,7 @@ const Workspace = () => {
                 error={error}
                 type="url"
                 required
+                placeholder="https://www.google.com/"
                 isLoading={isLoading}
             />
             {shortUrl && <div className={styles.arrow}>&#8595;</div>}

@@ -46,6 +46,7 @@
     color: rgb(255 255 255 / 1);
     background-image: linear-gradient(135deg, #f34079 40%, #fc894d);
     transition: box-shadow 0.1s ease;
+    min-width: 10rem;
 }
 
 .button:hover {
@@ -60,4 +61,8 @@
 .isLoading {
     pointer-events: none;
     opacity: 0.9;
+}
+
+.loader {
+    justify-content: center;
 }

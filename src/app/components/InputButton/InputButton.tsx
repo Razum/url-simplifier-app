@@ -18,7 +18,8 @@ const InputButton = ({
     onSubmit,
     required,
     type,
-    isLoading
+    isLoading,
+    placeholder
 }: InputButtonProps) => {
     return (
         <div className={styles.wrapper}>
@@ -29,7 +30,7 @@ const InputButton = ({
                     onChange={onChange}
                     required={required}
                     type={type}
-                    placeholder="Enter URL"
+                    placeholder={placeholder}
                 />
                 <button
                     type="button"
@@ -41,6 +42,7 @@ const InputButton = ({
                 >
                     {isLoading ? (
                         <ThreeDots
+                            wrapperClass={styles.loader}
                             visible={true}
                             height="40"
                             width="40"
